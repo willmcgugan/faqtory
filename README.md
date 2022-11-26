@@ -2,7 +2,7 @@
 
 This is a tool to auto-generate Frequently Asked Questions (FAQs) documents.
 
-You can compile a [FAQ.md](./FAQ.md) from individual `.question.md` documents. By default this will create a GitHub flavoured Markdown document, but you can edit a template to produce whatever format you like.
+FAQtory compiles a [FAQ.md](./FAQ.md) from individual `.question.md` documents. By default this will create a GitHub flavoured Markdown document, but you can edit a template to produce whatever format you like.
 
 ## Getting started
 
@@ -17,12 +17,12 @@ faqtory init
 This will create the following files and directories:
 
 - `faq.yml` A configuration file which you can edit.
-- `./.faq` A directory which stores templates.
-- `./questions` A directory containing question documents.
+- `./.faq/` A directory which stores templates.
+- `./questions/` A directory containing question documents.
 
 ## Adding questions
 
-To add questions create a file with the extension `.question.md` in the questions directory (`./questions` if you are using the defaults).
+To add questions create a file with the extension `.question.md` in the questions directory (`./questions/` if you are using the defaults).
 
 Question documents are Markdown with front-matter. Here's an example:
 
