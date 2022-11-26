@@ -45,7 +45,7 @@ Run the following command to build the FAQ:
 faqtory build
 ```
 
-With the default settings this will generate an `FAQ.md` file.
+With the default settings this will generate an [FAQ.md](./FAQ.md) file.
 
 ## Roadmap
 
