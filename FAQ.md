@@ -1,6 +1,7 @@
 
 # Frequently Asked Questions
 <details>  
+  <a name="what-does-faq-stand-for?"></a>
   <summary><b>What does FAQ stand for?</b></summary>
   <p>
 
@@ -8,6 +9,7 @@
 </details>
 
 <details>  
+  <a name="who-built-faqtory?"></a>
   <summary><b>Who built FAQtory?</b></summary>
   <p>
 
