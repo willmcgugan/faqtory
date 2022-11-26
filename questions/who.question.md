@@ -1,5 +1,5 @@
 ---
-title: Who build FAQtory?
+title: Who built FAQtory?
 
 ---
 

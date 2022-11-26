@@ -8,7 +8,7 @@
 </details>
 
 <details>  
-  <summary><b>Who build FAQtory?</b></summary>
+  <summary><b>Who built FAQtory?</b></summary>
   <p>
 
   FAQTory was built by [Will McGugan](https://www.willmcgugan.com).
