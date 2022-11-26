@@ -1,20 +1,16 @@
 
 # Frequently Asked Questions
-<details>  
-  <a name="what-does-faq-stand-for?"></a>
-  <summary><b>What does FAQ stand for?</b></summary>
-  <p>
+- [What does FAQ stand for?](#what-does-faq-stand-for?)
+- [Who built FAQtory?](#who-built-faqtory?)
 
-  FAQ stands for *Frequently Asked Questions*.
-</details>
+<hr>
 
-<details>  
-  <a name="who-built-faqtory?"></a>
-  <summary><b>Who built FAQtory?</b></summary>
-  <p>
+## What does FAQ stand for?
 
-  FAQTory was built by [Will McGugan](https://www.willmcgugan.com).
+FAQ stands for *Frequently Asked Questions*.
+
+## Who built FAQtory?
+
+FAQTory was built by [Will McGugan](https://www.willmcgugan.com).
 
 Will is the author of [Rich](https://github.com/Textualize/rich) and [Textual](https://textual.textualize.io).
-</details>
-

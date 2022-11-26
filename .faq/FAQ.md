@@ -2,12 +2,15 @@
 # Frequently Asked Questions 
 
 {%- for question in questions %}
-<details>  
-  <a name="{{ question.slug }}"></a>
-  <summary><b>{{ question.title }}</b></summary>
-  <p>
+- [{{ question.title }}](#{{ question.slug }})
+{%- endfor %}
 
-  {{ question. body }}
-</details>
-{% endfor %}
+<hr>
 
+{%- for question in questions %}
+
+## {{ question.title }}
+
+{{ question.body }}
+
+{%- endfor %}
