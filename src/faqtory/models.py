@@ -12,7 +12,7 @@ class Question:
 
     @property
     def slug(self) -> str:
-        return self.title.lower().replace(" ", "-")
+        return self.title.lower().replace(" ", "-").replace("?", "")
 
     @classmethod
     def read(cls, path: Path) -> "Question":

@@ -37,6 +37,7 @@ FAQ_TEMPLATE = """
 
 {%- for question in questions %}
 
+<a name="{{ question.slug }}"></a>
 ## {{ question.title }}
 
 {{ question.body }}
