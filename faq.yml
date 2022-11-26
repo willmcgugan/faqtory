@@ -1,0 +1,4 @@
+# FAQ configuration
+questions_path: "./questions"
+output_path: "./FAQ.md"
+templates_path: ".faq"
