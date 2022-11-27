@@ -47,7 +47,7 @@ FAQ_TEMPLATE = """
 
 
 @click.group()
-@click.version_option(version("faq"))
+@click.version_option(version("faqtory"))
 def run():
     pass
 
