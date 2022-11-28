@@ -39,6 +39,7 @@ class Config:
     questions_path: str
     output_path: str
     templates_path: str
+    faq_url: str
 
     @classmethod
     def read(cls, path: Path) -> "Config":
@@ -46,11 +47,12 @@ class Config:
             config_data = load(config_file, Loader=Loader)
 
         def get_str(key: str) -> str:
-            return config_data[key]
+            return config_data.get(key, "")
 
         config = cls(
             questions_path=get_str("questions_path"),
             output_path=get_str("output_path"),
             templates_path=get_str("templates_path"),
+            faq_url=get_str("faq_url"),
         )
         return config
