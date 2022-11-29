@@ -114,12 +114,13 @@ def init(
     error_console = Console(stderr=True)
 
     DEFAULT_CONFIG = f"""\
-# FAQtory settings (you may edit this file)
+# FAQtory settings
+
+faq_url: "{faq_url}" # Replace this with the URL to your FAQ.md!
 
 questions_path: "{questions}" # Where questions should be stored
 output_path: "{output}" # Where FAQ.md should be generated 
-templates_path: "{templates}" # Path to templates
-faq_url: "{faq_url}" # Replace this with the URL to your FAQ.md\
+templates_path: "{templates}" # Path to templates\
 """
 
     def write_path(path: Path, text: str) -> bool:
