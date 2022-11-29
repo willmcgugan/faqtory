@@ -11,7 +11,7 @@ jobs:
       - name: Install FAQtory
         run: pip install FAQtory
       - name: Run Suggest
-        run: factory suggest "${{ github.event.issue.subject }}" > suggest.md
+        run: faqtory suggest "${{ github.event.issue.subject }}" > suggest.md
       - name: Read suggest.md
         id: suggest
         uses: juliangruber/read-file-action@v1
