@@ -4,8 +4,6 @@
 - [What does FAQ stand for?](#what-does-faq-stand-for)
 - [Who built FAQtory?](#who-built-faqtory)
 
-<hr>
-
 <a name="what-python-version-does-faqtory-require"></a>
 ## What Python version does FAQtory require?
 

@@ -5,7 +5,6 @@
 - [{{ question.title }}](#{{ question.slug }})
 {%- endfor %}
 
-<hr>
 
 {%- for question in questions %}
 
