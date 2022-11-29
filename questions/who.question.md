@@ -2,7 +2,6 @@
 title: Who built FAQtory?
 alt_titles:
     - Who is the author of FAQtory?
-
 ---
 
 FAQtory was built by [Will McGugan](https://www.willmcgugan.com).
