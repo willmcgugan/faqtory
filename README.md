@@ -1,8 +1,10 @@
 # FAQtory
 
-This is a tool to auto-generate Frequently Asked Questions (FAQs) documents.
+FAQtory is a tool to auto-generate a Frequently Asked Questions (FAQs) document.
 
-FAQtory compiles a [FAQ.md](./FAQ.md) from individual `.question.md` documents. By default this will create a GitHub flavoured Markdown document, but you can edit a template to produce whatever format you like.
+With default settings, FAQtory will compile a `FAQ.md` in the root of your repository.
+
+Additionally, a "suggest" feature uses fuzzy matching to reply to GutHUB issues with suggestions from your FAQ -- which should cut down work for maintainers!
 
 ## Getting started
 
@@ -51,12 +53,16 @@ With the default settings this will generate an [FAQ.md](./FAQ.md) file.
 
 ## Suggest
 
-FAQtory can suggest an entry from the FAQ by matching a query against the question titles.
+The "suggest" subcommand can compile a list of FAQ entries that match a supplied issue title. Here's an example:
 
 ```bash
 faqtory suggest "who is the author of FAQtory?"
 ```
 
-This will generate a list of matching entries from the FAQ, and write Markdown to stdout. You can modify the output with the "suggest.md" template, which you will find in ".faq/" (if you haven't configured it elsewhere),
+This will generate a list of matching entries from the FAQ, and write Markdown to stdout. You can modify the output with the "suggest.md" template, which you will find in your ".faq/" directory (if you haven't configured it elsewhere),
 
-This feature is designed to be used with a GitHub action to post an automated response. To enable this feature on your repository, copy [new_issue.yml](https://github.com/willmcgugan/faqtory/blob/main/.github/workflows/new_issue.yml) to a similarly named directory.
+This feature is designed to be used with a GitHub action to post an automated response. To enable this feature, copy [new_issue.yml](https://github.com/willmcgugan/faqtory/blob/main/.github/workflows/new_issue.yml) to a similarly named directory in your repository.
+
+## Disclaimer
+
+This was a hastily put together tool by a maintainer that was tired of responding to the same old issues. I can't devote much time to this project, but I will happily accept PRs!
