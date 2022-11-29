@@ -1,5 +1,6 @@
+from __future__ import annotations
+
 from pathlib import Path
-from tempfile import mkdtemp
 
 from rich.console import Console
 from rich.panel import Panel
@@ -205,7 +206,6 @@ def suggest(query: str, config: str) -> None:
 
     scored_results = [(question.match(query), question) for question in questions]
     scored_results.sort(key=lambda result: result[0])
-    print(scored_results)
 
     results = [question for ratio, question in scored_results if ratio > 50]
 
