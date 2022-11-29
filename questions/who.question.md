@@ -1,5 +1,7 @@
 ---
 title: Who built FAQtory?
+alt_titles:
+    - Who is the author of FAQtory?
 
 ---
 

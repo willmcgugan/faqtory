@@ -1,14 +1,19 @@
-from dataclasses import dataclass
 from pathlib import Path
+from typing import List
 
+
+from thefuzz import fuzz
 import frontmatter
 from yaml import load, Loader
 
 
-@dataclass
-class Question:
+from pydantic import BaseModel
+
+
+class Question(BaseModel):
     title: str
     body: str
+    alt_titles: List[str] = []
 
     @property
     def slug(self) -> str:
@@ -30,12 +35,21 @@ class Question:
         question = cls(
             title=metadata.get("title", ""),
             body=content,
+            alt_titles=metadata.get("alt_titles", []),
         )
         return question
 
+    @property
+    def titles(self) -> list[str]:
+        """Get all titles including alternatives"""
+        return [self.title, *self.alt_titles]
 
-@dataclass
-class Config:
+    def match(self, query: str) -> int:
+        """Match this question against a query"""
+        return max(fuzz.partial_ratio(query, title) for title in self.titles)
+
+
+class Config(BaseModel):
     questions_path: str
     output_path: str
     templates_path: str

@@ -1,12 +1,14 @@
 from pathlib import Path
+from tempfile import mkdtemp
 
 from rich.console import Console
 from rich.panel import Panel
 from rich.syntax import Syntax
 
+from thefuzz import fuzz
 
 from .models import Config
-from .questions import Questions
+from .questions import read_questions
 from . import templates
 
 import click
@@ -181,13 +183,9 @@ def build(config: str, echo: bool) -> None:
     """Build FAQ.md"""
     console = Console()
     config_data = Config.read(Path(config))
-    questions = Questions()
+    questions = read_questions(config_data.questions_path)
 
-    questions.read_all(config_data.questions_path)
-
-    faq = templates.render_faq(
-        config_data.templates_path, questions=questions.questions
-    )
+    faq = templates.render_faq(config_data.templates_path, questions=questions)
 
     if echo:
         console.print(Syntax(faq, "markdown"))
@@ -196,21 +194,24 @@ def build(config: str, echo: bool) -> None:
 
 
 @run.command()
+@click.argument("query")
 @click.option(
     "--config", help="Path to config file", default=CONFIG_PATH, metavar="PATH"
 )
-def suggest(config: str) -> None:
+def suggest(query: str, config: str) -> None:
     """Suggest FAQ entries"""
-    console = Console()
     config_data = Config.read(Path(config))
+    questions = read_questions(config_data.questions_path)
 
-    questions = Questions()
-    questions.read_all(config_data.questions_path)
+    scored_results = [(question.match(query), question) for question in questions]
+    scored_results.sort(key=lambda result: result[0])
+    print(scored_results)
+
+    results = [question for ratio, question in scored_results if ratio > 50]
 
     suggest = templates.render_suggest(
         config_data.templates_path,
-        questions=questions.questions,
+        questions=results,
         faq_url=config_data.faq_url,
     )
-
     print(suggest)

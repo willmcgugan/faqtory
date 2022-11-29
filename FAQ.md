@@ -1,9 +1,15 @@
 
 # Frequently Asked Questions
+- [What Python version does FAQtory require?](#what-python-version-does-faqtory-require)
 - [What does FAQ stand for?](#what-does-faq-stand-for)
 - [Who built FAQtory?](#who-built-faqtory)
 
 <hr>
+
+<a name="what-python-version-does-faqtory-require"></a>
+## What Python version does FAQtory require?
+
+FAQtory requires Python3.7 or above.
 
 <a name="what-does-faq-stand-for"></a>
 ## What does FAQ stand for?
