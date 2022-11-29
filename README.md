@@ -36,7 +36,7 @@ alt_titles:
 FAQ stands for *Frequently Asked Questions*
 ```
 
-The filename is unimportant, but a `title` is mandatory. You can also add alternative titles under `alt_titles` which will be used with the `faqtory suggest` feature (but not displayed),
+The filename is unimportant, but a `title` is mandatory. You can also optionally add alternative titles under `alt_titles` which will be used with the `faqtory suggest` feature (but not displayed),
 
 ## Building
 
