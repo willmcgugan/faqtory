@@ -1,10 +1,8 @@
 # FAQtory
 
-FAQtory is a tool to auto-generate a Frequently Asked Questions (FAQs) document.
+FAQtory is a tool to auto-generate a Frequently Asked Questions [FAQ.md](./FAQ.md) document for your project.
 
-With default settings, FAQtory will compile a `FAQ.md` in the root of your repository.
-
-Additionally, a "suggest" feature uses fuzzy matching to reply to GutHUB issues with suggestions from your FAQ -- which should cut down work for maintainers!
+Additionally, a "suggest" feature uses fuzzy matching to reply to GitHub issues with suggestions from your FAQ.
 
 ## Getting started
 
@@ -33,6 +31,7 @@ Question documents are Markdown with front-matter. Here's an example:
 title: "What does FAQ stand for?"
 alt_titles:
   - "What is the meaning of FAQ?"
+  - "What does FAQ mean?"
 ---
 
 FAQ stands for *Frequently Asked Questions*
@@ -62,6 +61,7 @@ faqtory suggest "who is the author of FAQtory?"
 This will generate a list of matching entries from the FAQ, and write Markdown to stdout. You can modify the output with the "suggest.md" template, which you will find in your ".faq/" directory (if you haven't configured it elsewhere),
 
 This feature is designed to be used with a GitHub action to post an automated response. To enable this feature, copy [new_issue.yml](https://github.com/willmcgugan/faqtory/blob/main/.github/workflows/new_issue.yml) to a similarly named directory in your repository.
+
 
 ## Disclaimer
 
