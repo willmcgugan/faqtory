@@ -19,7 +19,12 @@ class Question(BaseModel):
 
     @property
     def slug(self) -> str:
-        return self.title.lower().replace(" ", "-").replace("?", "")
+        """Create a slug from the title.
+
+        Returns:
+            str: Slug suitable for use in an anchor.
+        """
+        return self.title.lower().replace(" ", "-").replace("?", "").replace(".", "")
 
     @classmethod
     def read(cls, path: Path) -> "Question":

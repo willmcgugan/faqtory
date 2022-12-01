@@ -1,12 +1,12 @@
 from __future__ import annotations
 
 from pathlib import Path
+import sys
 
 from rich.console import Console
 from rich.panel import Panel
 from rich.syntax import Syntax
-
-from thefuzz import fuzz
+from rich.traceback import install
 
 from .models import Config
 from .questions import read_questions
@@ -14,6 +14,9 @@ from . import templates
 
 import click
 from importlib.metadata import version
+
+
+install()
 
 CONFIG_PATH = "./faq.yml"
 QUESTIONS_PATH = "./questions"
@@ -85,7 +88,7 @@ def run():
 
 @run.command()
 @click.option(
-    "--config", help="Path to config file", default=CONFIG_PATH, metavar="PATH"
+    "-c", "--config", help="Path to config file", default=CONFIG_PATH, metavar="PATH"
 )
 @click.option(
     "--questions", help="Path to questions", default=QUESTIONS_PATH, metavar="PATH"
@@ -110,6 +113,7 @@ def init(
     faq_url: str,
     overwrite: bool,
 ) -> None:
+    """Initialise a repository for FAQtory"""
     console = Console()
     error_console = Console(stderr=True)
 
@@ -151,7 +155,7 @@ templates_path: "{templates}" # Path to templates\
     if write_path(Path(config), DEFAULT_CONFIG):
         console.print(
             Panel(
-                Syntax(DEFAULT_CONFIG, "yaml", line_numbers=True),
+                Syntax(DEFAULT_CONFIG, "yaml", line_numbers=True, word_wrap=True),
                 title=config,
             ),
         )
@@ -167,34 +171,41 @@ templates_path: "{templates}" # Path to templates\
 
 @run.command()
 @click.option(
+    "-c",
     "--config",
-    help="Path to config file or - for stdout",
+    help="Path to config file",
     default=CONFIG_PATH,
     metavar="PATH",
 )
-@click.option(
-    "--echo/-no-echo",
-    help="Write generated file to terminal",
-    default=False,
-)
-def build(config: str, echo: bool) -> None:
+@click.option("-o", "--output", help="Path to output, or - for stdout", default="")
+def build(config: str, output: str) -> None:
     """Build FAQ.md"""
-    console = Console()
+    console = Console(stderr=True)
     config_data = Config.read(Path(config))
     questions = read_questions(config_data.questions_path)
 
     faq = templates.render_faq(config_data.templates_path, questions=questions)
 
-    if echo:
-        console.print(Syntax(faq, "markdown"))
+    faq_path = output or config_data.output_path
 
-    Path(config_data.output_path).write_text(faq)
+    if faq_path == "-":
+        print(faq)
+    else:
+        try:
+            Path(faq_path).write_text(faq)
+        except OSError as error:
+            console.print("[red]⚠[/] failed to write faq;", error)
+            sys.exit(-1)
+        else:
+            console.print(
+                f'[green]✔[/] wrote FAQ with {len(questions)} questions to "{faq_path}"'
+            )
 
 
 @run.command()
 @click.argument("query")
 @click.option(
-    "--config", help="Path to config file", default=CONFIG_PATH, metavar="PATH"
+    "-c", "--config", help="Path to config file", default=CONFIG_PATH, metavar="PATH"
 )
 def suggest(query: str, config: str) -> None:
     """Suggest FAQ entries"""
