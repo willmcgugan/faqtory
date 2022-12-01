@@ -1,6 +1,6 @@
 # FAQtory
 
-FAQtory is a tool to auto-generate a Frequently Asked Questions [FAQ.md](./FAQ.md) document for your project.
+FAQtory is a tool to auto-generate a [FAQ.md](./FAQ.md) (Frequently Asked Questions) document for your project.
 
 Additionally, a "suggest" feature uses fuzzy matching to reply to GitHub issues with suggestions from your FAQ.
 
