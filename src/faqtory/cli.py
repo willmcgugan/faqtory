@@ -183,7 +183,6 @@ def build(config: str, output: str) -> None:
     console = Console(stderr=True)
     config_data = Config.read(Path(config))
     questions = read_questions(config_data.questions_path)
-    questions.sort(key=lambda question: question.title.lower())
 
     faq = templates.render_faq(config_data.templates_path, questions=questions)
 
@@ -214,7 +213,7 @@ def suggest(query: str, config: str) -> None:
     questions = read_questions(config_data.questions_path)
 
     scored_results = [(question.match(query), question) for question in questions]
-    scored_results.sort(key=lambda result: result[0])
+    scored_results.sort(key=lambda result: result[0], reverse=True)
 
     results = [question for ratio, question in scored_results if ratio > 50]
 

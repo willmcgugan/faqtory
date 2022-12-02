@@ -11,4 +11,5 @@ def read_questions(path: str) -> list[Question]:
     for question_path in Path(path).glob("*.question.md"):
         question = Question.read(question_path)
         questions.append(question)
+    questions.sort(key=lambda question: question.title.lower())
     return questions
