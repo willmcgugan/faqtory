@@ -183,6 +183,7 @@ def build(config: str, output: str) -> None:
     console = Console(stderr=True)
     config_data = Config.read(Path(config))
     questions = read_questions(config_data.questions_path)
+    questions.sort(key=lambda question: question.title)
 
     faq = templates.render_faq(config_data.templates_path, questions=questions)
 

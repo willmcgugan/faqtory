@@ -1,44 +1,12 @@
 
 # Frequently Asked Questions
+- [How Frequently are Frequently Asked Questions Asked?](#how-frequently-are-frequently-asked-questions-asked)
 - [What Python version does FAQtory require?](#what-python-version-does-faqtory-require)
-- [What is the answer to the Ultimate Question of Life, The Universe, and Everything?](#what-is-the-answer-to-the-ultimate-question-of-life,-the-universe,-and-everything)
 - [What does FAQ stand for?](#what-does-faq-stand-for)
+- [What happens if you keep using signed 32-bit integers to keep track of time in 2038?](#what-happens-if-you-keep-using-signed-32-bit-integers-to-keep-track-of-time-in-2038)
+- [What is the answer to the Ultimate Question of Life, The Universe, and Everything?](#what-is-the-answer-to-the-ultimate-question-of-life,-the-universe,-and-everything)
 - [What's the difference between a duck?](#what's-the-difference-between-a-duck)
 - [Who built FAQtory?](#who-built-faqtory)
-- [What happens if you keep using signed 32-bit integers to keep track of time in 2038?](#what-happens-if-you-keep-using-signed-32-bit-integers-to-keep-track-of-time-in-2038)
-- [How Frequently are Frequently Asked Questions Asked?](#how-frequently-are-frequently-asked-questions-asked)
-
-<a name="what-python-version-does-faqtory-require"></a>
-## What Python version does FAQtory require?
-
-FAQtory requires Python3.7 or above.
-
-<a name="what-is-the-answer-to-the-ultimate-question-of-life,-the-universe,-and-everything"></a>
-## What is the answer to the Ultimate Question of Life, The Universe, and Everything?
-
-42
-
-<a name="what-does-faq-stand-for"></a>
-## What does FAQ stand for?
-
-FAQ stands for *Frequently Asked Questions*.
-
-<a name="what's-the-difference-between-a-duck"></a>
-## What's the difference between a duck?
-
-One leg is both the same.
-
-<a name="who-built-faqtory"></a>
-## Who built FAQtory?
-
-FAQtory was built by [Will McGugan](https://www.willmcgugan.com).
-
-Will is the author of [Rich](https://github.com/Textualize/rich) and [Textual](https://textual.textualize.io).
-
-<a name="what-happens-if-you-keep-using-signed-32-bit-integers-to-keep-track-of-time-in-2038"></a>
-## What happens if you keep using signed 32-bit integers to keep track of time in 2038?
-
-You'll experience an epoch fail.
 
 <a name="how-frequently-are-frequently-asked-questions-asked"></a>
 ## How Frequently are Frequently Asked Questions Asked?
@@ -53,6 +21,38 @@ never be asked.
 > "73% of FAQ questions have been, in fact, been asked, and 71% never will be"
 
   — [*Nick Radcliffe*](https://github.com/njr0/faqtory/blob/main/questions/frequency.question.md)
+
+<a name="what-python-version-does-faqtory-require"></a>
+## What Python version does FAQtory require?
+
+FAQtory requires Python3.7 or above.
+
+<a name="what-does-faq-stand-for"></a>
+## What does FAQ stand for?
+
+FAQ stands for *Frequently Asked Questions*.
+
+<a name="what-happens-if-you-keep-using-signed-32-bit-integers-to-keep-track-of-time-in-2038"></a>
+## What happens if you keep using signed 32-bit integers to keep track of time in 2038?
+
+You'll experience an epoch fail.
+
+<a name="what-is-the-answer-to-the-ultimate-question-of-life,-the-universe,-and-everything"></a>
+## What is the answer to the Ultimate Question of Life, The Universe, and Everything?
+
+42
+
+<a name="what's-the-difference-between-a-duck"></a>
+## What's the difference between a duck?
+
+One leg is both the same.
+
+<a name="who-built-faqtory"></a>
+## Who built FAQtory?
+
+FAQtory was built by [Will McGugan](https://www.willmcgugan.com).
+
+Will is the author of [Rich](https://github.com/Textualize/rich) and [Textual](https://textual.textualize.io).
 
 <hr>
 

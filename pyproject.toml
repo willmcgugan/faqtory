@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "faqtory"
-version = "1.0.0"
+version = "1.1.0"
 description = "Auto FAQ builder"
 authors = ["Will McGugan <willmcgugan@gmail.com>"]
 license = "MIT"
