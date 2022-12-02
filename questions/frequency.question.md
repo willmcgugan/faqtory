@@ -9,7 +9,7 @@ never be asked.
 
   — [*Vic Reeves*](https://www.linkedin.com/pulse/89-statistics-made-up-spot-vic-reeves-friend-llp/)
 
-> "73% of FAQ questions have been, in fact, been asked, and 71% never will be"
+> "73% of FAQ questions have never, in fact, been asked, and 71% never will be"
 
   — [*Nick Radcliffe*](https://github.com/njr0/faqtory/blob/main/questions/frequency.question.md)
 
