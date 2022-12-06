@@ -1,12 +1,26 @@
 
 # Frequently Asked Questions
+- [Are you thinking what I'm thinking?](#are-you-thinking-what-i'm-thinking)
 - [How Frequently are Frequently Asked Questions Asked?](#how-frequently-are-frequently-asked-questions-asked)
+- [How much more black could this be?](#how-much-more-black-could-this-be)
+- [What are the chances of anything coming from Mars?](#what-are-the-chances-of-anything-coming-from-mars)
 - [What does FAQ stand for?](#what-does-faq-stand-for)
 - [What happens if you keep using signed 32-bit integers to keep track of time in 2038?](#what-happens-if-you-keep-using-signed-32-bit-integers-to-keep-track-of-time-in-2038)
 - [What is the answer to the Ultimate Question of Life, The Universe, and Everything?](#what-is-the-answer-to-the-ultimate-question-of-life,-the-universe,-and-everything)
 - [What Python version does FAQtory require?](#what-python-version-does-faqtory-require)
 - [What's the difference between a duck?](#what's-the-difference-between-a-duck)
+- [When you are in front of a a Minbari fleet, where should you really be if you value your life?](#when-you-are-in-front-of-a-a-minbari-fleet,-where-should-you-really-be-if-you-value-your-life)
+- [Where am I?](#where-am-i)
 - [Who built FAQtory?](#who-built-faqtory)
+- [Who was Joan of Arc?](#who-was-joan-of-arc)
+- [Who's the lady with the log?](#who's-the-lady-with-the-log)
+
+<a name="are-you-thinking-what-i'm-thinking"></a>
+## Are you thinking what I'm thinking?
+
+I think so, Brain. But would the villains really have gotten away with it, if it weren't for those pesky kids and their dog
+
+<cite>Pinky</cite>
 
 <a name="how-frequently-are-frequently-asked-questions-asked"></a>
 ## How Frequently are Frequently Asked Questions Asked?
@@ -18,9 +32,23 @@ never be asked.
 
   — [*Vic Reeves*](https://www.linkedin.com/pulse/89-statistics-made-up-spot-vic-reeves-friend-llp/)
 
-> "73% of FAQ questions have been, in fact, been asked, and 71% never will be"
+> "73% of FAQ questions have never, in fact, been asked, and 71% never will be"
 
   — [*Nick Radcliffe*](https://github.com/njr0/faqtory/blob/main/questions/frequency.question.md)
+
+<a name="how-much-more-black-could-this-be"></a>
+## How much more black could this be?
+
+None. None more. Black.
+
+<cite>Tufnel, Nigel</cite>
+
+<a name="what-are-the-chances-of-anything-coming-from-mars"></a>
+## What are the chances of anything coming from Mars?
+
+Around a million to one.
+
+<cite>Ogilvy</cite>
 
 <a name="what-does-faq-stand-for"></a>
 ## What does FAQ stand for?
@@ -47,12 +75,40 @@ FAQtory requires Python3.7 or above.
 
 One leg is both the same.
 
+<a name="when-you-are-in-front-of-a-a-minbari-fleet,-where-should-you-really-be-if-you-value-your-life"></a>
+## When you are in front of a a Minbari fleet, where should you really be if you value your life?
+
+Somewhere else.
+
+<cite>Delenn</cite>
+
+<a name="where-am-i"></a>
+## Where am I?
+
+In the village.
+
+<cite>Number 2</cite>
+
 <a name="who-built-faqtory"></a>
 ## Who built FAQtory?
 
 FAQtory was built by [Will McGugan](https://www.willmcgugan.com).
 
 Will is the author of [Rich](https://github.com/Textualize/rich) and [Textual](https://textual.textualize.io).
+
+<a name="who-was-joan-of-arc"></a>
+## Who was Joan of Arc?
+
+Noah's wife.
+
+<cite>Theodore Logan</cite>
+
+<a name="who's-the-lady-with-the-log"></a>
+## Who's the lady with the log?
+
+The Log Lady.
+
+<cite>Harry S. Truman</cite>
 
 <hr>
 
