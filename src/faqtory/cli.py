@@ -101,7 +101,7 @@ def run():
 )
 @click.option("--faq-url", help="FAQ URL", default=FAQ_URL, metavar="PATH")
 @click.option(
-    "--overwrite/-no-overwrite",
+    "--overwrite/--no-overwrite",
     help="Overwrite files if they exist",
     default=False,
 )
