@@ -1,0 +1,7 @@
+rich
+jinja2
+click
+pyyaml
+python-frontmatter
+thefuzz[speedup]
+pydantic
