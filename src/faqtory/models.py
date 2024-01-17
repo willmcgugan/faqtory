@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import string
 from pathlib import Path
 from typing import List
 
@@ -24,7 +25,12 @@ class Question(BaseModel):
         Returns:
             str: Slug suitable for use in an anchor.
         """
-        return self.title.lower().replace(" ", "-").replace("?", "").replace(".", "")
+        chars_to_remove = string.punctuation
+        chars_to_remove = chars_to_remove.replace("-", "").replace("_", "")
+        slug = self.title.lower()
+        slug = slug.translate(str.maketrans("", "", chars_to_remove))
+        slug = slug.replace(" ", "-")
+        return slug
 
     @classmethod
     def read(cls, path: Path) -> "Question":
