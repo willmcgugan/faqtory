@@ -6,7 +6,11 @@ Additionally, a "suggest" feature uses fuzzy matching to reply to GitHub issues 
 
 ## Getting started
 
-Install `faqtory` from PyPI. I'm going to assume you know how to do this bit.
+Faqtory is best installed via [pipx](https://github.com/pypa/pipx) to avoid any dependency conflicts:
+
+```bash
+pipx install faqtory
+```
 
 Run the following from the directory you wish to store the FAQ document. 
 
